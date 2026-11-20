@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
@@ -8,6 +9,7 @@
 <title>Miles Server</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -17,59 +19,90 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: black;
     overflow: hidden;
+    font-family: Arial, sans-serif;
 }
+
+/* VIDEO PLAYER */
 
 .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: calc(100% - 40px);
-    background: #000;
+    height: calc(100vh - 90px);
+    height: calc(100dvh - 90px);
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-iframe {
+.video-container iframe {
     width: 100%;
     height: 100%;
     border: none;
-    background: #000;
+    background: black;
 }
+
+/* VISITOR COUNTER */
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 40px;
-    background: #000;
+    height: 90px;
+    background: #080808;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    border-top: 1px solid #252525;
 }
 
-footer img {
-    max-height: 22px;
+.counter-label {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
+
+.counter img {
+    min-height: 22px;
+    max-height: 30px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- VIDEO JUKEBOX -->
+
 <div class="video-container">
+
     <iframe
         src="https://pve.tail0dc390.ts.net/"
-        allow="autoplay; fullscreen"
+        allow="autoplay; fullscreen; encrypted-media"
         allowfullscreen>
     </iframe>
+
 </div>
 
+<!-- VISITOR COUNTER -->
+
 <footer>
-    <img
-       src="https://vbr.nathanchung.dev/badge?page_id=project-vector-miles-server&text=Visitors&color=333333&lcolor=111111"
-        alt="Visitor counter">
+
+    <div class="counter-label">
+        MILES SERVER
+    </div>
+
+    <div class="counter">
+
+        <img
+            src="https://vbr.nathanchung.dev/badge?page_id=project-vector-miles-server&text=Visitors&color=444444&lcolor=222222"
+            alt="Visitor counter">
+
+    </div>
+
 </footer>
 
 </body>
